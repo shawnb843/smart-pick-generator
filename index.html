@@ -2,24 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Smart Pick Pro - Round 6</title>
+  <title>Smart Pick Pro - Round 7</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  <div id="lottery-bg"></div>
   <div id="app">
-    <h1>Smart Pick Pro – Round 6</h1>
-    <canvas id="sumChart" height="150"></canvas>
-    <canvas id="digitHeatmap" height="150"></canvas>
+    <h1>Smart Pick Pro – Round 7</h1>
 
-    <h2>🤖 AI Combo Suggestion</h2>
-    <button onclick="generateCombo()">Generate Smart Pick</button>
-    <div id="comboOutput"></div>
+    <h2>🔥 Hot Pattern Forecaster</h2>
+    <div id="hotPatterns">Loading...</div>
 
-    <h2>🔔 Watchlist Alerts</h2>
-    <input id="watchInput" placeholder="Enter combo to watch (e.g. 12345)" />
-    <button onclick="addToWatchlist()">Add to Watchlist</button>
-    <div id="watchlist"></div>
+    <h2>🕒 Draw Timing Trends</h2>
+    <div id="timingTrends">Loading...</div>
+
+    <h2>🔁 Streak Detector</h2>
+    <div id="streaks">Loading...</div>
+
+    <h2>❌ Miss Tracker</h2>
+    <div id="misses">Loading...</div>
+
+    <h2>🧩 Combo Near-Miss Viewer</h2>
+    <input id="comboInput" placeholder="Enter combo (e.g. 12345)">
+    <button onclick="viewNearMiss()">View Near Misses</button>
+    <div id="nearMissOutput"></div>
+
+    <h2>🪞 Mirror + VTRAC Matrix</h2>
+    <input id="vCombo" placeholder="Enter combo for VTRAC/Mirror (e.g. 93570)">
+    <button onclick="analyzeMatrix()">Analyze</button>
+    <div id="matrixResults"></div>
   </div>
   <script src="script.js"></script>
 </body>

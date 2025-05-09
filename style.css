@@ -1,23 +1,35 @@
 body {
+  margin: 0;
   font-family: sans-serif;
-  background: #f0f0f0;
-  padding: 20px;
+  background: #0d0d0d;
+  color: #fff;
+}
+#lottery-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Lotto_Machine_Interior.jpg/1200px-Lotto_Machine_Interior.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(5px) brightness(0.5);
+  z-index: -1;
 }
 #app {
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
-  background: white;
   padding: 20px;
+  background: rgba(0,0,0,0.8);
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-canvas {
-  background: white;
-  margin: 15px 0;
-}
-#comboOutput, #watchlist {
-  background: #eef;
+input {
+  width: 100%;
   padding: 10px;
-  margin-top: 10px;
+  margin: 10px 0;
+}
+button {
+  padding: 10px 20px;
+}
+#nearMissOutput, #matrixResults, #hotPatterns, #timingTrends, #streaks, #misses {
+  background: #222;
+  padding: 10px;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
