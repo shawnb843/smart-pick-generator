@@ -20,14 +20,9 @@ button {
   margin-top: 10px;
   padding: 10px 15px;
 }
-#results, #watchlist {
+#results {
   margin-top: 20px;
   background: #eef;
   padding: 15px;
   border-radius: 5px;
-}
-.watch-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
 }

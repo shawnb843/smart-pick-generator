@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Smart Pick Generator</title>
+  <title>Smart Pick Generator with Filters</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,14 +15,20 @@
       <option value="5">Pick 5</option>
     </select><br><br>
     <label><input type="checkbox" id="allowRepeats" checked /> Allow Repeated Digits</label><br><br>
+
+    <label>Sum Range:</label>
+    <input type="number" id="minSum" placeholder="Min" value="0" /> -
+    <input type="number" id="maxSum" placeholder="Max" value="36" /><br><br>
+
+    <label>Include Digits (e.g. 1,2):</label>
+    <input type="text" id="includeDigits" /><br>
+
+    <label>Exclude Digits (e.g. 0,9):</label>
+    <input type="text" id="excludeDigits" /><br><br>
+
     <textarea id="history" rows="10" placeholder="Paste your draw history here..."></textarea><br>
     <button onclick="analyze()">Analyze & Generate Smart Pick</button><br><br>
-    <label>Simulate Draws:</label>
-    <input type="number" id="simCount" value="1000" min="1" max="10000" />
-    <button onclick="runSimulation()">Run Simulation</button>
     <div id="results"></div>
-    <h2>⭐ Watchlist</h2>
-    <div id="watchlist"></div>
   </div>
   <script src="script.js"></script>
 </body>
