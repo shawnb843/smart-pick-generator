@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background: #f9f9f9;
+  background: #f5f5f5;
   padding: 20px;
 }
 #app {
@@ -11,16 +11,15 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-textarea, input {
+textarea {
   width: 100%;
-  margin-top: 10px;
   padding: 10px;
 }
 button {
   margin-top: 10px;
   padding: 10px 15px;
 }
-#results {
+#results, #charts {
   margin-top: 20px;
   background: #eef;
   padding: 15px;
