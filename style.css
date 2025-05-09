@@ -1,50 +1,23 @@
 body {
   font-family: sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-}
-#app {
-  max-width: 1000px;
-  margin: auto;
+  background: #f0f0f0;
   padding: 20px;
 }
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#app {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-.toggle {
-  font-size: 14px;
+canvas {
+  background: white;
+  margin: 15px 0;
 }
-nav button {
-  margin: 5px;
-  padding: 10px 15px;
-}
-.tab {
-  display: none;
-  margin-top: 20px;
-}
-.tab.active {
-  display: block;
-}
-textarea, input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-#results, #comboDetails, #filterResults {
+#comboOutput, #watchlist {
   background: #eef;
   padding: 10px;
+  margin-top: 10px;
   border-radius: 8px;
-}
-.dark {
-  background-color: #1f1f1f;
-  color: white;
-}
-.dark input, .dark textarea {
-  background: #333;
-  color: white;
-}
-.dark #results, .dark #comboDetails, .dark #filterResults {
-  background: #2c2c2c;
 }
