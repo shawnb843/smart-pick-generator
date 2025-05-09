@@ -1,28 +1,50 @@
 body {
   font-family: sans-serif;
+  margin: 0;
   background: #f5f5f5;
-  padding: 20px;
 }
 #app {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
-  background: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle {
+  font-size: 14px;
+}
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
+}
+.tab {
+  display: none;
+  margin-top: 20px;
+}
+.tab.active {
+  display: block;
 }
 textarea, input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
-button {
-  padding: 10px 15px;
-  margin-right: 10px;
-}
-#results, #filterResults {
+#results, #comboDetails, #filterResults {
   background: #eef;
   padding: 10px;
   border-radius: 8px;
-  margin-top: 20px;
+}
+.dark {
+  background-color: #1f1f1f;
+  color: white;
+}
+.dark input, .dark textarea {
+  background: #333;
+  color: white;
+}
+.dark #results, .dark #comboDetails, .dark #filterResults {
+  background: #2c2c2c;
 }

@@ -2,21 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Smart Pick Pro - Round 4</title>
+  <title>Smart Pick Pro - Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="app">
-    <h1>Smart Pick Pro – Round 4</h1>
-    <textarea id="history" rows="10" placeholder="Paste your Lottery Post history here..."></textarea><br>
-    <button onclick="analyze()">Analyze & Track</button>
-    <button onclick="downloadCSV()">📂 Export CSV</button>
-    <div id="results"></div>
-    <h2>🧪 Filter Efficiency Report</h2>
-    <input id="filterDigit" placeholder="Required Digit (e.g. 1)" />
-    <input id="filterSum" placeholder="Required Sum (e.g. 18)" />
-    <button onclick="testFilters()">Test Filter Performance</button>
-    <div id="filterResults"></div>
+  <div id="app" class="light">
+    <header>
+      <h1>Smart Pick Pro – Dashboard</h1>
+      <label class="toggle">
+        <input type="checkbox" id="darkModeToggle" />
+        Dark Mode
+      </label>
+    </header>
+    <nav>
+      <button onclick="switchTab('analysis')">📊 Analysis</button>
+      <button onclick="switchTab('combo')">🔍 Combo Inspector</button>
+      <button onclick="switchTab('export')">📂 Export</button>
+    </nav>
+
+    <section id="analysis" class="tab active">
+      <textarea id="history" rows="10" placeholder="Paste your Lottery Post history here..."></textarea><br>
+      <button onclick="analyze()">Analyze & Track</button>
+      <div id="results"></div>
+    </section>
+
+    <section id="combo" class="tab">
+      <input id="comboInput" placeholder="Enter combo (e.g. 382)" />
+      <button onclick="inspectCombo()">Inspect Combo</button>
+      <div id="comboDetails"></div>
+    </section>
+
+    <section id="export" class="tab">
+      <input id="filterDigit" placeholder="Required Digit (e.g. 1)" />
+      <input id="filterSum" placeholder="Required Sum (e.g. 18)" />
+      <button onclick="testFilters()">Test Filter Performance</button>
+      <button onclick="downloadCSV()">📥 Export CSV</button>
+      <div id="filterResults"></div>
+    </section>
   </div>
   <script src="script.js"></script>
 </body>
