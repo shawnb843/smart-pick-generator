@@ -2,36 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Smart Pick Pro - Round 7</title>
+  <title>Smart Pick Pro – Final Version</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div id="lottery-bg"></div>
   <div id="app">
-    <h1>Smart Pick Pro – Round 7</h1>
-
-    <h2>🔥 Hot Pattern Forecaster</h2>
-    <div id="hotPatterns">Loading...</div>
-
-    <h2>🕒 Draw Timing Trends</h2>
-    <div id="timingTrends">Loading...</div>
-
-    <h2>🔁 Streak Detector</h2>
-    <div id="streaks">Loading...</div>
-
-    <h2>❌ Miss Tracker</h2>
-    <div id="misses">Loading...</div>
-
-    <h2>🧩 Combo Near-Miss Viewer</h2>
-    <input id="comboInput" placeholder="Enter combo (e.g. 12345)">
-    <button onclick="viewNearMiss()">View Near Misses</button>
-    <div id="nearMissOutput"></div>
-
-    <h2>🪞 Mirror + VTRAC Matrix</h2>
-    <input id="vCombo" placeholder="Enter combo for VTRAC/Mirror (e.g. 93570)">
-    <button onclick="analyzeMatrix()">Analyze</button>
-    <div id="matrixResults"></div>
+    <h1>🎯 Smart Pick Pro – Final Unified Version</h1>
+    <section>
+      <h2>📥 Upload History</h2>
+      <textarea id="history" rows="6" placeholder="Paste history from Lottery Post..."></textarea><br>
+      <button onclick="analyze()">Analyze</button>
+      <button onclick="downloadCSV()">📂 Export CSV</button>
+    </section>
+    <section>
+      <h2>🎛️ Smart Filters</h2>
+      <input placeholder="Sum Range (e.g. 12-24)" id="sumRange" />
+      <input placeholder="Include digits (e.g. 1,3,7)" id="includeDigits" />
+      <input placeholder="Exclude digits (e.g. 0,9)" id="excludeDigits" />
+      <label><input type="checkbox" id="noRepeats" /> No Repeats</label>
+      <button onclick="generateSmartPick()">🔐 Generate Smart Pick</button>
+      <div id="smartPickResult"></div>
+    </section>
+    <section>
+      <h2>📊 Stats & Trackers</h2>
+      <canvas id="sumChart" height="100"></canvas>
+      <canvas id="digitHeatmap" height="100"></canvas>
+    </section>
+    <section>
+      <h2>🧠 Watchlist & Alerts</h2>
+      <input placeholder="Combo to watch (e.g. 12345)" id="watchInput" />
+      <button onclick="addToWatchlist()">Add</button>
+      <div id="watchlist"></div>
+    </section>
+    <section>
+      <h2>🔥 Advanced Insights</h2>
+      <div id="hotPatterns"></div>
+      <div id="timingTrends"></div>
+      <div id="streaks"></div>
+      <div id="misses"></div>
+    </section>
+    <section>
+      <h2>🧩 Near Miss Analyzer</h2>
+      <input id="comboInput" placeholder="Enter combo (e.g. 12345)">
+      <button onclick="viewNearMiss()">View</button>
+      <div id="nearMissOutput"></div>
+    </section>
+    <section>
+      <h2>🪞 Mirror & VTRAC Matrix</h2>
+      <input id="vCombo" placeholder="Enter combo (e.g. 93570)">
+      <button onclick="analyzeMatrix()">Analyze</button>
+      <div id="matrixResults"></div>
+    </section>
   </div>
   <script src="script.js"></script>
 </body>
